@@ -80,8 +80,23 @@ contains("yo-yo", items, function(bool) {
 
 /* STRETCH PROBLEM */
 
+const free = [1, 2, 3, 1, 2, 3];
+
+function succinct(array) {
+  let result = [];
+  for(let i = 0; i < array.length; i++) {
+    if(!result.includes(array[i])) {
+      result.push(array[i]);
+    }
+  }
+  return result;
+}
+
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  console.log(cb(array));
 }
+
+removeDuplicates(free,succinct);
