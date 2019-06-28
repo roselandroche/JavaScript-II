@@ -1,7 +1,23 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
-
-
+function groundFloor() {
+  const groundFloorView = 'I can see across the yard.';
+  console.log(groundFloorView);
+  
+  function firstFloor() {
+    const firstFloorView = 'I can see across the street.'
+    console.log(`${groundFloorView} ${firstFloorView}`);
+    
+    function secondFloor() {
+      const secondFloorView = 'I can see across the town.';
+      console.log(`${groundFloorView} ${firstFloorView} ${secondFloorView}`);
+    }
+    secondFloor();
+  }
+  firstFloor();
+}
+groundFloor();
+ 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 
